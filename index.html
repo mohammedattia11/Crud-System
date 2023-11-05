@@ -1,0 +1,50 @@
+<html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>Crud-System</title>
+</head>
+<body data-bs-theme="dark">
+    <div class="container w-75 my-4">
+        <h1 class="text-center">Crud-System</h1>
+        <div class="inputs my-3">
+            <input id="productName" placeholder="Name" class="form-control my-4" type="text">
+            <input id="productPrice" placeholder="Price" class="form-control my-4" type="number">
+            <select id="categroty" class="form-select my-4">
+                <option value="phone">Phone</option>
+                <option value="tv">Tv</option>
+                <option value="labtop">Labtop</option>
+            </select>
+            <div class="d-flex justify-content-between">
+                <button id="addBtn" onclick='addProduct()' class="btn btn-outline-info d-block">Add Product</button>
+                <button id="updateBtn" onclick='updateProduct()' class="btn btn-outline-warning d-none">Update Product</button>
+                <button onclick="clearInputs()" class="btn btn-outline-danger mx-3">Clear Form</button>
+            </div>
+            <input oninput="searchProducts(this.value)" class="form-control w-75 m-auto my-3" placeholder="Search">
+        </div>
+        <div class="content">
+            <table class="table  table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">Count</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Category</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody">
+                  
+                </tbody>
+              </table>
+        </div>
+    </div>
+    
+    <script src="Js/bootstrap.bundle.min.js"></script>
+    <script src="Js/main.js"></script>
+</body>
+</html>
